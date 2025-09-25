@@ -13,6 +13,12 @@ const CACHE_PATH = __DIR__ . '/../app/Views/Cache';
 $blade = new BladeOne(VIEWS_PATH, CACHE_PATH, BladeOne::MODE_DEBUG); // MODE_DEBUG allows to pinpoint troubles.
 
 $game = new Game();
-$gameArray = $game->dealRound();
+
+$game->dealRound();
+$game->dealRound();
+$game->dealRound();
+
+echo '<pre>';
+print_r($game->getGame());
 // Blade test.
 echo $blade->run("game", ["Hello" => "World"]);
