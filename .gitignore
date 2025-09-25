@@ -1,0 +1,6 @@
+# Composer dependencies
+/vendor/
+
+# Cache files
+/Views/Cache/
+*.cache
