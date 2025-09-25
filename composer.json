@@ -4,8 +4,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Core\\": "Core/",
-            "Session\\": "Session/"
+            "Core\\": "src/Core/",
+            "Session\\": "src/Session/"
         }
     }
 }

@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Session;
+namespace src\Session;
 
 class GameSession {}
