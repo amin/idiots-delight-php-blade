@@ -8,6 +8,8 @@ const VIEWS_PATH = __DIR__ . '/Views';
 const CACHE_PATH = __DIR__ . '/Views/Cache';
 
 use Core\Game;
+use Session\GameSession;
+
 use eftec\bladeone\BladeOne;
 
 $game = new Game();
