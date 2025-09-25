@@ -9,7 +9,7 @@ class Deck
         $this->generateDeck();
     }
 
-    private function generateDeck()
+    private function generateDeck(): void
     {
         $range = range(0, 51);
         shuffle($range);
@@ -18,8 +18,8 @@ class Deck
         $this->deck = array_map(fn($column) => array_map(fn($i) => new Card($i), $column), $this->deck);
     }
 
-    public function getDeck(): array
+    public function drawFromAllColumns(): array
     {
-        return $this->deck;
+        return array_map(fn($i) => array_pop($this->deck[$i]), array_keys($this->deck));
     }
 }

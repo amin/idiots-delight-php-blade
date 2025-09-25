@@ -7,4 +7,9 @@ class Game
     {
         $this->deck = new Deck();
     }
+
+    public function dealRound(): array
+    {
+        return $this->deck->drawFromAllColumns();
+    }
 }

@@ -2,7 +2,6 @@
 
 class Card
 {
-
     private int $value;
 
     public function __construct(int $value)
