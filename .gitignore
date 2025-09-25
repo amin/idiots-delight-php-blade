@@ -2,5 +2,5 @@
 /vendor/
 
 # Cache files
-/Views/Cache/
+/src/Views/Cache/
 *.cache
