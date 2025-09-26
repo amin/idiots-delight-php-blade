@@ -18,12 +18,17 @@ class Deck
         $range = range(0, 51);
         shuffle($range);
 
-        $this->deck = array_map(null, ...array_chunk($range, 4));
-        $this->deck = array_map(fn($column) => array_map(fn($i) => new Card($i), $column), $this->deck);
+        $this->deck = array_map(
+            fn($column) => (array_map(fn($value) => new Card($value), $column)),
+            array_chunk($range, 13)
+        );
     }
 
     public function drawFromAllColumns(): array
     {
-        return array_map(fn($i) => array_pop($this->deck[$i]), array_keys($this->deck));
+        return array_map(
+            fn($i) => array_pop($this->deck[$i]),
+            array_keys($this->deck)
+        );
     }
 }
