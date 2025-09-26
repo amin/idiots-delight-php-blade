@@ -18,7 +18,4 @@ $game->dealRound();
 $game->dealRound();
 $game->dealRound();
 
-echo '<pre>';
-print_r($game->getGame());
-// Blade test.
-echo $blade->run("game", ["Hello" => "World"]);
+echo $blade->run("game", ["cards" => $game->getGame()]);

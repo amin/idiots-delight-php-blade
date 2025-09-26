@@ -1,2 +1,8 @@
-<h1>Title</h1>
-{{$Hello}}
+@foreach ($cards as $column)
+@foreach($column as $card)
+<p>
+    {{$card->getRank()}}
+    {{$card->getSuit()}}
+</p>
+@endforeach
+@endforeach
