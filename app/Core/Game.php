@@ -16,8 +16,10 @@ class Game
 
     public function dealRound(): void
     {
-
-        array_walk($this->deck->drawFromAllColumns(), fn($card, $i) => $card && $this->tableau[$i][] = $card);
+        array_walk(
+            $this->deck->drawFromAllColumns(),
+            fn($card, $i) => $card && $this->tableau[$i][] = $card
+        );
     }
 
     public function getGame(): array
